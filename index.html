@@ -1,11 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .floating-stack {
+            background: #455a64;
+            color: #fff;
+            height: 360px;
+            width: 380px;
+            border-radius: 1rem;
+            overflow-y: auto;
+        }
+
+        .floating-stack>dl {
+            margin: 0 0 1rem;
+            display: grid;
+            grid-template-columns: 2.5rem 1fr;
+            align-items: center;
+        }
+
+        .floating-stack dt {
+            position: sticky;
+            top: 0.5rem;
+            left: 0.5rem;
+            font-weight: bold;
+            background: #263238;
+            color: #cfd8dc;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            padding: 0.25rem 1rem;
+            grid-column: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .floating-stack dd {
+            grid-column: 2;
+            margin: 0;
+            padding: 0.75rem;
+        }
+
+        .floating-stack>dl:first-of-type>dd:first-of-type {
+            margin-top: 0.25rem;
+        }
+
+        body {
+            background: #0d0d16;
+            color: white;
+            height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            font: 100%/1.4 system-ui;
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* ===== Scrollbar CSS ===== */
+        /* Firefox */
+        * {
+            scrollbar-width: auto;
+            scrollbar-color: #8f54a0 #ffffff;
+        }
+
+        /* Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 16px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #ffffff;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #4b7f97;
+            border-radius: 10px;
+            border: 3px solid #ffffff;
+        }
+    </style>
 </head>
+
 <body>
-    <a href="Page1/index.html">Link to first page</a>
+    <div class="container">
+        <div class="floating-stack">
+            <ol>
+                
+                <li> <a href="Stopwatch/index.html">
+                        <dd>Js Stop Watch</dd>
+                    </a></li>
+                <li> <a href="Analog clock/index.html">
+                        <dd>Js Analog Clock</dd>
+                    </a></li>
+                <li> <a href="Nvidia/Home/index.html">
+                        <dd>Nvidia Clone</dd>
+                    </a></li>
+                <li> <a href="Paypal/Home/index.html">
+                        <dd>Paypal Clone</dd>
+                    </a></li>
+                <li> <a href="SpaceX/Main/index.html">
+                        <dd>SpaceX</dd>
+                    </a></li>
+                <li> <a href="page1/index.html">
+                        <dd>Figma Design to Code 1</dd>
+                    </a></li>
+                <li> <a href="page2/index.html">
+                        <dd>Figma Design to Code 2 (Responsive)</dd>
+                    </a></li>
+                <li> <a href="page3/Index.html">
+                        <dd>Figma Design to Code 3 (Responsive)</dd>
+                    </a></li>
+
+            </ol>
+        </div>
+    </div>
 </body>
+
 </html>
