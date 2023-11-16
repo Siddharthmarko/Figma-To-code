@@ -1,0 +1,990 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Quicksand&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+li {
+    list-style: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+html {
+    font-size: 10px;
+}
+img {
+    cursor: pointer;
+    }
+h1 {
+    font-size: 5.5rem;
+    font-family: 'Nunito', sans-serif;
+}
+h2 {
+    font-size: 2.4rem;
+    font-family: 'Nunito', sans-serif;
+}
+h3 {
+    font-size: 2.2rem;
+    font-family: 'Quicksand', sans-serif;
+}
+h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+}
+h5 {
+    font-size: 1.6rem;
+    cursor: pointer;font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
+}
+p {
+    font-size: 2rem;
+    font-family: 'Quicksand', sans-serif;
+}
+:root {
+    --orange: #FFA800;
+    --blue: #377DFF;
+    --red: #FF2D2D;
+    --green: #7CE761;
+}
+/* ------------------------- header -------------- */
+body, 
+section,
+#hero > div, 
+#project-done,
+#service>div:last-of-type>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body {
+    row-gap: 50px;
+}
+/*
+    mujhe @media mai width change nahi karni padi
+    max aur 100% dedo to nahi karni padegi bar bar
+    columns gap yaha faltu nikla 
+*/
+header {
+    margin-top: 76px;
+    max-width: 1240px;
+    width: 100%;
+}
+nav,
+ul, 
+nav > div, 
+#project-done > div,
+#ceo-post > div {
+    display: flex;
+    align-items: center;
+}
+nav {
+    justify-content: space-between;
+}
+nav > div{
+    gap: 10px;
+}
+
+ /*
+    aur ye gap mai screem mai jaake kam kardunga  
+*/
+nav ul {
+    column-gap: 50px;
+}
+nav .fa-solid{
+    display: none;
+}
+
+button {
+    color: var(--blue);
+    width: 185px;    
+    height: 48px;
+    font-weight: bold;
+    border-radius: 24px;
+    border: 1px solid var(--blue);
+    background: transparent;
+}
+/* ------------- hero ------  */
+#hero {
+    row-gap: 25px;
+  
+}
+#hero h1 {
+    font-size: 6.4rem;
+    font-weight: 800;
+    max-width: 735px;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+#hero > p {
+    max-width: 767px;
+    text-align: center;
+    line-height: 150%;
+    letter-spacing: 0.2px;
+}
+ /* -------------hero ------
+ ---- cover photo -------  */
+#project-done {
+    justify-content: center;
+    gap: 10px;
+    width: 175px;
+    margin: 24px -68px;
+    height: 95px;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+#project-done > div{
+    gap: 6px;
+}
+#project-done p{
+    font-size: 1.2rem;
+    color: #1D1D1D;
+    font-weight: 700;
+    letter-spacing: 0.12px;
+    opacity: 0.5;
+}
+#project-done h2 {
+    font-weight: normal;
+}
+#project-done > div:nth-of-type(2) h2:nth-of-type(1){
+    font-weight: bold;
+}
+#hero > div > div {
+    display: flex;
+}
+/*
+margin  hamesha distance ko bigaad sakta hai
+*/
+#hero > div > img {
+    display: block;
+    position: relative;
+    z-index: -1;
+}
+#hero > div >img:nth-of-type(1){
+    left: 138px;
+    top: 55px;
+}
+#hero > div >img:nth-of-type(2){
+    left: 175px;
+    top: -55px;
+}
+#hero > div {
+    max-width: 866px;
+    /* border: 1px solid red; */
+    align-items: flex-start;
+}
+ /* ------ hero ------ 
+ --------- ceo quote ----  */
+#ceo-post {
+    padding: 25px 50px;
+    width: 100%;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+    /* border: 1px solid red; */
+}
+#ceo-post img {
+    width: 50px;
+}
+#ceo-post h4{   
+    margin-bottom: 5px;
+}
+#ceo-post, #ceo-post > div {
+    gap: 20px;
+}
+#ceo-post p{
+    max-width: 700px;
+    letter-spacing: 0.2px;
+    line-height: 150%;
+    font-size: 20px;
+}
+ /* --------- about us ----------- */
+
+ /*
+    imgage ke corner wale images 
+    margin se bhi set ho rahe the par usme bahri width badali hai to farak padta hai
+    
+ */
+ #aboutUs {
+    max-width: 1366px;
+    padding: 0 50px;
+    gap: 20px;
+ }
+ #aboutUs h2{
+    color: var(--blue);
+    letter-spacing: 0.24px;
+ }
+ #aboutUs > div {
+     display: flex;
+     justify-content: space-between;
+     column-gap: 60px;
+     /* border: 1px solid green; */
+    }
+    #aboutUs p{
+        color: #464646;
+        max-width: 540px;
+        line-height: 32px;
+        letter-spacing: 0.2px;
+    }
+    #aboutUs > div > div:nth-of-type(2){
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        height: 100%;
+        margin: auto 0;
+        /* border: 1px solid red; */
+    }
+    
+    #aboutUs img{
+        display: block;
+    object-fit: contain;
+}
+
+ #aboutUs img:nth-of-type(1){
+     position: relative;
+    top: 65px;
+    left: -35px;
+     z-index: -1;
+ }
+ #aboutUs img:nth-of-type(2){
+     border-radius: 24px;
+     
+    }
+ #aboutUs img:nth-of-type(3){
+    position: relative;
+    right: -35px;
+    bottom: 60px;
+    float: right;
+    z-index: -1;
+}
+#aboutUs > div > div:nth-of-type(2) div{
+        display: flex;  
+        gap: 3vw;
+        /* border: 1px solid red; */
+    }
+    /* --------- -------------------------------------
+    Service 
+    -------- ---------------------------------------*/
+#service {
+    max-width: 1366px;
+    padding: 0 20px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+#service  > div:first-of-type {
+    max-width: 520px;
+    width: 50%;
+}
+#service>div:first-of-type > h2{ 
+    color: var(--blue); 
+}
+#service>div:first-of-type > h1{
+    margin: 30px 0 20px 0;
+}
+#service>div:first-of-type > P{ 
+    line-height: 32px; 
+    letter-spacing: 0.2px;
+}
+#service>div:first-of-type > div{ 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+}
+
+/* -------------------- service ---------
+    -------- right side ------------  */
+
+    #service  > div:last-of-type {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        max-width: 50%;
+        /* border: 1px solid green; */
+    }
+    #service  > div:last-of-type > div{
+        
+        /* text-align: center; */
+        width: 260px;
+        height: 265px;
+        border: 1px solid red;
+    }
+/*
+    combinator ajeeb hote hai 
+    neeche wali line is tarah treat karta hai
+    [  section  > div:last-of-type > div > h2, img  ]
+    matlb saare section ka ye wala pattern
+    
+    this hai ye sirf , ke sth hot ahai 
+    [  section  h2, img  ]
+    wo abhi , ke baad wala jese yaha par 
+    img par impact padega
+    par iski jagah img, h2 hota to
+    h2 par farak padta inko alagt alagt likhna hi jarui hai 
+    wese agar .class h2, img ] bhi karta hu to ye patter dekhne ki 
+    koshish karta hai
+*/
+
+ #service>div:last-of-type>div {
+    text-align: center;
+     justify-content: center;
+     gap: 30px;
+     border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: #FFF;
+    box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.10);
+}
+    #service > div:last-of-type h2, 
+    #service > div:last-of-type img {
+        line-height: 34px;
+        letter-spacing: 0.24px;
+    }
+    #service>div:last-of-type>div > div{ 
+        padding: 30px;
+        border-radius: 100%;
+        background-color: var(--blue);
+        /* border: 1px solid blue; */
+    }
+      #service>div:last-of-type>div:nth-of-type(2) > div { 
+        background-color: var(--red);
+    }  
+      #service>div:last-of-type>div:nth-of-type(3) > div { 
+        background-color: var(--green);
+    }  
+      #service>div:last-of-type>div:nth-of-type(4) > div { 
+        background-color: var(--orange);
+    }  
+/* ---------------------------------- portfolio -----------------
+--------------------- */
+#portfolio {
+    max-width: 1366px;
+    padding: 0 40px;
+    width: 100%;
+    gap: 20px;
+}
+#portfolio > h2 { 
+    color: var(--blue);
+}
+#portfolio > p {
+    color: #464646;
+    line-height: 34px; 
+    letter-spacing: 0.2px;
+    max-width: 649px;
+    text-align: center;
+}
+#portfolio > div  {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    /* border: 1px solid green; */
+}
+#portfolio > div > div > img {
+    max-width: 350px;
+    width: 30vw;
+    border-radius: 30px;
+}
+#portfolio > div > div > h2 {
+    font-size: 2em;
+    color: white;
+    position: absolute;
+    text-align: center;
+    margin: -45px 20px;
+    font-weight: 700;
+    /* border: 1px solid red; */
+}
+#portfolio > button {
+    display: block;
+}
+ /* ------------------------ testimonial --------- 
+ -------------  */
+#testimonial {
+    max-width: 1366px;
+    padding: 0 40px;
+    width: 100%;
+    gap: 20px;
+}
+
+#testimonial > h2 {
+    color: var(--blue);
+}
+
+#testimonial > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    /* border: 1px solid green; */
+}
+#testimonial > div  > div > div > div > h5,
+#testimonial > div  > div > div > div > h4{
+    text-align: start;
+    margin-top: 5px;
+}
+#testimonial > div  > div > div{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid green; */
+}
+#testimonial > div  div {
+    gap: 30px;
+}
+#testimonial > div > div {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 380px;
+    width: 32vw;
+    max-height: 335px;
+    height: 48vh;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.05);
+}
+
+#testimonial > div > div > P {
+    font-size: 2em;
+    line-height: 28px;
+    color: #464646;
+    letter-spacing: 0.18px;
+}
+#testimonial > div > div > div > img {
+    max-width: 70px;
+    width: 7.5vw;
+    /* border: 1px solid red; */
+ }
+
+ /* --------------- 
+ ---------- contact Us -------------  */
+
+ #contactUs {
+     flex-direction: row;
+     justify-content: space-between;
+     padding: 0 50px;
+     max-width: 1366px;
+     width: 100%;
+    }
+    #contactUs > div:first-of-type{ 
+        max-width: 590px;
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+    #contactUs > div:first-of-type > h1 {
+        letter-spacing: 0.165px;
+        font-weight: 700;
+        line-height: 150%;
+    } 
+    #contactUs > div:first-of-type > p { 
+        line-height: 150%;
+        margin: 30px 0;
+    }
+    #contactUs > div:first-of-type > button { 
+        display: block;
+        background-color: var(--blue);
+        color: white;
+        box-shadow: 0px 4px 8px 0px rgba(55, 125, 255, 0.50);
+    }
+    #contactUs > div:last-of-type > img{
+        width: 100%;
+    }
+    #contactUs > div:last-of-type {
+        max-width: 50%;
+        width: 100%;
+        /* border: 1px solid red;    */
+    }
+
+ /* ------------ footer ---------  */
+ 
+footer > div {
+    gap: 10px;
+}
+footer {
+    gap: 70px;
+    padding: 130px 80px 30px 80px;
+    display: flex;
+    max-width: 1366px;
+    background-color: #383638;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+footer  li { 
+    color: #ffff;
+    font-weight: normal;
+}
+footer > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+footer > div:first-of-type  > div{ 
+    display: flex;
+    justify-content: center;
+    width: 187px;
+    height: 86px;
+    gap: 10px;
+    border-radius: 20px;
+    align-items: center;
+    color: black;
+    background-color: white;
+    /* border: 1px solid red; */
+}
+footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 280px;
+}
+footer > div >   ul > li:first-of-type { 
+    font-size: 2.2rem;
+    font-weight: 700;
+    /* border: 1px solid green; */
+}
+footer > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+}
+footer > div:last-of-type > div {
+    max-width: 500px;
+    width: 100%;
+    border-bottom: 2px solid white;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+footer > div:last-of-type > div > img {
+    margin-left: 20px;
+}
+footer > div:last-of-type > P{
+    margin: 0 auto;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   desktop  */
+@media (max-width: 1200px) {
+    header {
+        /* border: 1px solid brown; */
+    }
+
+       #aboutUs, #aboutUs > div {
+            width:  100%;
+        }
+        #aboutUs img:nth-of-type(2){
+            width: 100%;
+            /* border: 1px solid red; */
+        }
+       #aboutUs  p{
+            width: 100%;
+            font-size: 2vw;
+            line-height: 125%;
+            /* border: 1px solid red; */
+   }
+   #aboutUs > div > div:nth-of-type(2) {
+       gap: 14px;
+   }
+   #service {
+    padding: 0 50px;
+   }
+           #service > div:last-of-type {
+            max-width: 100%;
+            gap: 20px;
+        }
+        #service>div:last-of-type>div{
+            width: 217px;
+            height: 225px;
+            gap: 15px;
+        }
+        #service>div:last-of-type>div > div {
+            padding: 20px;
+        }
+        #service > div:last-of-type h2, 
+        #service > div:last-of-type img {
+            line-height: 25px;
+        }
+    #service  > div:last-of-type {        
+        max-width: 455px;
+        justify-content: space-evenly;
+    }
+    #portfolio {
+    padding: 0;
+}
+    #testimonial {
+    padding: 0;
+}
+#contactUs>div:first-of-type>h1 {
+    letter-spacing: 0.165px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+#contactUs>div:first-of-type>h1 {
+    letter-spacing: 0.165px;
+    font-weight: 700;
+    font-size: 4.3vw;
+    line-height: 113%;
+}
+
+#contactUs>div:first-of-type>p {
+    line-height: 150%;
+    margin: 3vw 0;
+}
+footer {
+    padding: 130px 50px 30px 50px;
+}
+
+}
+/*   laptop  */
+@media (max-width: 1024px) {
+    html {
+        font-size: 9px;
+    }
+    header {
+        /* border: 1px solid black; */
+    }
+    nav img {
+        height: 40px;
+    }
+    nav ul{
+        column-gap: 35px;
+    }
+    button {
+        width: 140px;    
+        height: 40px;
+        font-weight: bold;
+    }
+    #hero h1 {
+        max-width: 650px;
+    }
+
+    #hero>div:nth-of-type(1) >div>img {
+        width: 77vw;
+    }
+        #ceo-post {
+            padding: 20px 30px;
+        }
+        #ceo-post p{
+            width: 70vw;
+        }
+        #ceo-post {
+            gap: 10px;
+        }
+        #ceo-post {
+            width: auto;
+        }
+        #aboutUs > div {
+            column-gap: 40px;
+        }
+        #aboutUs img:nth-of-type(2){
+            width: 100%;
+            /* border: 1px solid green; */
+        }
+        #service {
+    padding: 0px 20px;
+}
+        #service>div:first-of-type > h1 {
+    margin: 30px 0 10px 0;
+    font-size: 4.5vw;
+}
+#service>div:first-of-type>P {
+    line-height: 160%;
+    letter-spacing: 0.2px;
+    font-size: 2.1vw;
+}
+footer {
+    padding: 85px 10px 30px 10px;
+}
+
+footer > div:first-of-type > h4 {
+    font-size: 1.7rem;
+}
+     footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 120px;
+}
+
+     
+}
+/* if viewport width 400px
+    1vw = 4px;    
+*/
+/* tablet */
+@media (max-width: 768px){
+    html {
+        font-size: 8px;
+    }
+    header {
+        padding: 0 40px;
+        /* border: 1px solid red; */
+    }
+        nav ul li,
+        button {
+            display: none;
+        }
+    
+        nav img {
+            height: 30px;
+        }  
+
+        /* yaha par javascirpt  */
+        nav i:nth-of-type(2) {
+            display: inline;
+            font-size: 4rem;
+        }
+          #hero {
+            padding: 0 30px;
+        }
+          #hero h1 {
+            font-size: 8vw; 
+        }
+          #hero > p {
+            font-size: 2.5vw;
+        }
+        #project-done, #hero>div>img {
+            display: none;
+        }
+        #ceo-post p {
+            font-size: 2.5vw;
+        }
+        #ceo-post h5, h4 {
+            font-size: 2.5vw;
+        }
+           #aboutUs img {
+            width: 25vw;
+        }
+        #aboutUs img:nth-of-type(1) {
+            top: 14vh;
+        }
+        #aboutUs img:nth-of-type(3) {
+            bottom: 12vh;
+        }
+        #aboutUs img:nth-of-type(2){
+            width: 80vw;
+        }
+    #aboutUs>div{
+        flex-direction: column;
+    }
+    #aboutUs  p{
+        color: #464646;;
+        font-size: 3.5vw;
+        line-height: 150%;
+        letter-spacing: 0.2px;
+    }
+    #aboutUs button {
+        display: block;
+    }
+        #service {
+            text-align: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        #service > div:first-of-type{
+            max-width: 90%;
+            width: 100%;
+        }
+        #service>div:first-of-type > P{            
+            color: #464646;
+            font-size: 3.5vw;
+            line-height: 150%;
+            letter-spacing: 0.2px;
+        }
+        #service>div:first-of-type > h1{
+            text-align: center;
+            max-width: 518px;
+            margin: 20px auto;
+        }
+        #service>div:first-of-type > div {
+            justify-content: center;
+            align-items: center;
+        }
+        #service>div:first-of-type > div > h4 { 
+            font-size: 20px;
+        }
+
+        #service > div:last-of-type h2 {
+            font-size: 4.5vw;
+        }
+           #service>div:last-of-type>div{
+             width: 260px;
+            height: 265px;
+            gap: 30px;
+        }
+          #service > div:last-of-type h2, 
+        #service > div:last-of-type img {
+            line-height: 40px;
+        }
+        #service  > div:last-of-type {
+    max-width: 557px;
+    }
+    #portfolio > div {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    #portfolio > div > div > img {
+        width: 88vw;
+    }
+    #portfolio > p {
+        line-height: 22px;
+        width: 95vw;
+        max-width: 420px;
+    }
+    #portfolio > div {
+        margin-top: 24px;
+    }
+    #testimonial > div {
+        margin-top: 24px;
+    }
+    #testimonial > div {
+        flex-direction: column;
+        align-items: center;
+    }
+    #testimonial > div > div {
+    padding: 0 45px;
+    max-width: 600px;
+    width: 90vw;
+    max-height: 380px;
+     height: 80vw;
+    /* border: 1px solid red; */
+    }
+#testimonial > div > div > P {
+    font-size: 4vw;
+    line-height: 1.9em;
+}
+#testimonial > div > div > div > img {
+    max-width: 70px;
+    width: 16vw;
+    /* border: 1px solid red; */
+}
+#testimonial > div  > div > div > div > h5,
+#testimonial > div  > div > div > div > h4 {
+    font-size: 5vw;
+}
+
+#contactUs{
+    flex-direction: column;
+    gap: 40px;
+}
+#contactUs>div:first-of-type>h1 {
+    letter-spacing: 0.165px;
+    font-weight: 700;
+    font-size: 6vw;
+    text-align: center;
+    line-height: 150%;
+}
+#contactUs>div:first-of-type>p {
+    font-size: 5vw;
+    margin: 48px 0;
+}
+#contactUs > div:first-of-type > button {
+    margin: 0 auto;
+}
+#contactUs > div:last-of-type {
+    max-width: 100%;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+}
+footer>div {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 52px;
+    /* border: 1px solid red; */
+}
+
+
+/* mobile */
+@media (max-width: 480px) {
+    html {
+            font-size: 6px;
+        }
+        header {
+            /* border: 1px solid green; */
+            padding: 0 10px;
+        }
+        #hero {
+            padding: 0 20px;
+        }
+        #hero h1 {
+            font-size: 8vw;
+        }
+        #hero > p {
+            font-size: 3.7vw;
+        }
+     #aboutUs img {
+            width: 25vw;
+        }
+        #aboutUs img:nth-of-type(1) {
+            top: 8vh;
+            left: -7vw;
+        }
+        #aboutUs img:nth-of-type(3) {
+            bottom: 8vh;
+            right: -8vw;
+        }
+        #aboutUs img:nth-of-type(2){
+            width: 80vw;
+        }
+        #service > div:first-of-type{
+            max-width: 300px;
+        }
+        #service>div:first-of-type > P{
+            line-height: 20px;
+        }
+        #service>div:first-of-type > div > h4 { 
+            font-size: 12px;
+        }
+        #service > div:last-of-type {
+            max-width: 100%;
+        }
+        #service > div:last-of-type h2 {
+            font-size: 6.3vw;
+        }
+footer li {
+    list-style: none;
+    font-size: 2rem;
+}
+
+}
+
+
