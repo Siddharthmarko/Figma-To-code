@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+
+* {
+  box-sizing: border-box;
+}
+.validationAlert  li {
+  margin: 10px 0;
+  margin-right: 40px;  
+}
+.showError{
+  display: none;
+}
+.validationAlert {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: white;
+  background-color: red;
+}
+.validationAlert > div:first-of-type {
+  position: relative;
+  margin-top: -5px;
+  border-radius: 30px;
+  height: 5px;
+  background-color: white;
+  animation-name: alertload;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+
+}
+@keyframes alertload {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #c1bdba;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: .5s ease;
+}
+a:hover {
+  color: #179b77;
+}
+
+.form {
+  background: rgb(60 86 108);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 35px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+ 
+
+.tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  margin: 0 45px;
+  padding: 15px;
+  background: black;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  float: left;
+  width: 30%;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s ease;
+  border-radius: 30px;
+}
+.tab-group > .active > a { 
+  background-color: #37444a;
+  color: #ffffff;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px; 
+}
+
+label {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+label .req {
+  margin: 2px;
+  color: #1ab188;
+}
+
+input, textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  height: 100%;
+  padding: 10px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  transition: border.25s ease;
+  box-shadow: .25s ease;
+}
+input:focus, textarea:focus {
+  outline: 0;
+  color: white;
+  border-color: white;
+}
+input {
+      border: 4px solid;
+    border-radius: 15px;
+    color: black;
+}
+
+textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.top-row > div:last-child {
+  margin: 0;
+}
+
+.button {
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 25px;
+    margin: auto;
+    width: 240px;  
+}
+.button-block {
+  display: block;
+}
+.button:hover, .button:focus {
+  background: #37444a;
+}
+
+
+.forgot {
+  margin-top: -20px;
+  text-align: right;
+}
+    </style>
+</head>
+<body>
+    <div class="form">
+    
+        <ul class="tab-group">
+            <li class="tab active"><a href="#signup">Sign Up</a></li>
+            <li class="tab"><a href="#login">Log In</a></li>
+        </ul>
+    
+        <div class="tab-content">
+            <div id="signup">
+                <h1>Sign Up for Free</h1>
+    
+                <form id="createData">
+    
+                    <div class="top-row">
+                        <div class="field-wrap">
+                          
+                            <input type="text" class="firstname" placeholder="First Name" />
+                        </div>
+    
+                        <div class="field-wrap">
+                          
+                            <input type="text" class="lastname" placeholder="Last Name" />
+                        </div>
+                    </div>
+    
+                    <div class="field-wrap">
+                      
+                        <input type="text" class="username"placeholder="Username" />
+                    </div>
+                    <div class="field-wrap">
+                      
+                        <input type="email"  class="email" placeholder="Email" />
+                    </div>
+    
+                    <div class="field-wrap">
+                        
+                        <input type="password" class="password" placeholder="Password"  />
+                    </div>
+
+                    <button class="button button-block signbtn" >Get Started</button>
+    
+                </form>
+    
+            </div>
+    
+            <div id="login">
+                <h1>Welcome Back!</h1>
+    
+                <form id="loginData">
+    
+                    <div class="field-wrap">
+                        
+                        <input type="email" placeholder="Email" />
+                    </div>
+    
+                    <div class="field-wrap">
+                        
+                        <input type="password" placeholder="Password" />
+                    </div>
+    
+                    <p class="forgot"><a href="#">Forgot Password?</a></p>
+    
+                    <button class="button button-block loginbtn">Log In</button>
+    
+                </form>
+    
+            </div>
+    
+        </div><!-- tab-content -->
+    
+    </div> <!-- /form -->
+    <div class="validationAlert showError">
+      <div></div>
+        <ul class="error-list">
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
