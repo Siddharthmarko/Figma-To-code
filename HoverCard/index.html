@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 150%;
+}
+.see-more {
+    position: absolute;
+    color: white;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-340%);
+    font: bold;
+}
+.see-more:hover {
+    border-bottom: 2px solid rgba(94, 234, 213, 0.734);
+}
+body {
+    background-color: rgb(15, 23, 42);
+    overflow: hidden;
+}
+.box {
+    display: flex;
+    gap: 30px;
+    padding: 25px 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* height: 220px; */
+    width: 550px;
+    border-radius: 10px;
+    border-top: 2px solid rgb(97 110 147 / 19%);
+}
+.box:hover {
+    background-color: rgb(97 110 147 / 10%);
+}
+.project-img {
+    width: 320px;
+}
+.project-content {
+    font-size: 16px;
+}
+.project-tech button{
+    padding: 5px 18px;
+    letter-spacing: 2px;
+    background: rgb(94 234 212 / 14%);
+    border: 0;
+    color: rgb(94, 234, 212);
+    font-weight: bolder;
+    border-radius: 20px;
+}
+.project-content h3 { 
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #ffffff9e;
+}
+.project-content p {
+    color: #a3a3a369;
+    font-weight: bold;
+    margin: 15px 0;
+}
+.box:hover h3 { 
+    gap: 15px;
+    color: rgba(94, 234, 213, 0.734);
+}
+.box:hover .project-img > img { 
+    border: 1px solid white;    
+}
+.mouse {
+    z-index: -1;
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    border-radius: 100%;
+    background: radial-gradient(rgba(29, 79, 216, 0.125), transparent 60%);
+}
+
+    </style>
+</head>
+<body>
+    <div class="mouse"></div>
+
+    <div class="box">
+        <div class="project-img">
+            <img src="Image/project-png.jpg" width="100%" alt="">
+        </div>
+
+        <div class="project-content">
+            <h3>Project Name 
+                <i><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="25" height="22" viewBox="0 0 34 22" fill="none">
+                <path d="M23.1429 1.46899L32.6667 10.9976L23.1429 20.5238M1.71428 10.9999H32.6667" stroke="white"
+                    stroke-width="2.38095" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></i>
+            </h3>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi facilis pariatur voluptates fugit commodi ullam eveniet voluptas doloremque eum</p>
+            
+            <div class="project-tech">
+                <button>Html</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="see-more">See more</div>
+    <script>
+        const cursor = document.querySelector('.mouse')
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = (e.clientX - cursor.clientHeight / 2) + 'px';
+                cursor.style.top = (e.clientY - cursor.clientWidth / 2) + 'px';
+            })
+    </script>
+</body>
+</html>
