@@ -94,11 +94,10 @@
     <div class="container">
         <div class="floating-stack">
             <ol>
-                
                 <li> <a href="Stopwatch/index.html">
                         <dd>Js Stop Watch</dd>
                     </a></li>
-                <li> <a href="FormValidation/index.html"> 
+                <li> <a href="FormValidation/index.html">
                         <dd>SignUpForm</dd>
                     </a></li>
                 <li> <a href="backgroundColourChange/index.html">
@@ -115,7 +114,7 @@
                     </a></li>
                 <li> <a href="Landing Pages/Paypal/Home/index.html">
                         <dd>Paypal Clone</dd>
-                     </a></li>
+                    </a></li>
                 <li> <a href="Landing Pages/page1/index.html">
                         <dd>Figma Design to Code 1</dd>
                     </a></li>
@@ -128,9 +127,17 @@
                 <li> <a href="Landing Pages/page3/Index.html">
                         <dd>Figma Design to Code 3 (Responsive)</dd>
                     </a></li>
+                    <a href="/Portfolio/index.html"></a>
             </ol>
         </div>
     </div>
+    <script>
+        const currentUrl = window.location.href;
+            const baseUrl = currentUrl.substring(0, currentUrl.lastIndexOf("/"));
+            const relativeUrl = "/portfolio/index.html";
+            window.location.href = baseUrl + relativeUrl;
+
+    </script>
 </body>
 
 </html>
