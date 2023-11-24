@@ -12,6 +12,9 @@ body {
     /* border: 1px solid white; */
     max-height: 500px;
 }
+.not-responsive {
+    display: none;
+}
 a {
     text-decoration: none;
 }
@@ -171,4 +174,16 @@ li {
 }
 .box:hover .project-img > img { 
     border: 1px solid white;    
+}
+
+@media screen and (max-width: 1220px) {
+    body {
+        background-color: white;
+    }
+    .not-responsive {
+        display: block;
+    }
+    .portfolio {
+        display: none;
+    }
 }
