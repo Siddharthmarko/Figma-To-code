@@ -136,11 +136,18 @@ li {
     /* transform: translate(-50%, -50%); */
     width: 550px;
     border-radius: 10px;
-    border-top: 2px solid rgb(97 110 147 / 19%);
+    border-top: 2px solid transparent;
+    /* border-top: 2px solid rgb(97 110 147 / 19%); */
     /* border: 1px solid white; */
 }
+
 .box:hover {
     background-color: rgb(97 110 147 / 10%);
+    border-color: rgb(97 110 147 / 19%);
+}
+
+.project-img > img{ 
+    border: 1px solid transparent;
 }
 .project-img {
     max-width: 120px;
