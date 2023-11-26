@@ -15,6 +15,17 @@ body {
 .not-responsive {
     display: none;
 }
+.education {
+    display: flex;
+    gap: 20px;
+}
+.footer {
+    line-height: 150%;
+    max-width: 500px;
+    color: white;
+    padding: 50px 0;
+}
+
 a {
     text-decoration: none;
 }
@@ -67,7 +78,7 @@ li {
     }
     .navigate, 
     .social-link, 
-    .nav-seciton,
+    .nav-section,
     .portfolio-heading {
         display: flex;
         flex-direction: column;
@@ -97,31 +108,38 @@ li {
         /* border: 1px solid white; */
     }
     .right {
-        padding-top: 50px;
+        padding: 50px 0;
     }
     .social-link {
         flex-direction: row;
     }
-    .nav-seciton li:hover span { 
+    .nav-section li:hover span { 
         width: 80px;
         transition: all 0.2s;
     }
-    .nav-seciton li:hover { 
+    .nav-section li:hover { 
         color: rgba(255, 255, 255, 0.9);
     }
-    .nav-seciton li {
+    .nav-section li {
         font-size: 12px;
         letter-spacing: 2px;
         color: #94a3b8;        
         font-weight: bold;
     }
-    .nav-seciton span{
+    .nav-section span{
         display: inline-flex;
         margin: 5px 16px;
         height: 1px;
         width: 32px;
         background-color: white;
     }
+    .active span {
+        width: 80px;
+    }
+   .nav-section  .active {
+        color: white;
+    }
+
     .social-link img{
         width: 28px;
     }
@@ -139,6 +157,11 @@ li {
     border-top: 2px solid transparent;
     /* border-top: 2px solid rgb(97 110 147 / 19%); */
     /* border: 1px solid white; */
+}
+
+.unfocus-box {
+    opacity: 0.5;
+
 }
 
 .box:hover {
@@ -171,7 +194,7 @@ li {
     color: rgba(255, 255, 255, 0.9);
 }
 .project-content p {
-    color: #a3a3a369;
+    color: #a3a3a3b8;
     font-weight: bold;
     margin: 15px 0;
 }
