@@ -1,0 +1,59 @@
+.not-responsive {
+    display: none;
+}
+
+
+/* 992 to 1220px */
+@media screen and (max-width: 1220px) {
+    .portfolio {
+        display: flex;
+    }
+    body {
+        background-color: rgba(15, 23, 42);
+        padding: 40px;
+    }
+    .right {
+        max-width: 525px;
+    }
+}
+/* 768 se 992 tak  */
+@media screen and (max-width: 992px) { 
+    body {
+        padding: 0px 70px;
+    }
+    .portfolio {
+        flex-wrap: wrap;
+        gap: 10vw;
+    }
+    .navigate {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        max-width: none;
+    }
+    .portfolio-heading p{
+        max-width: 500px;
+    }
+    .right {
+        max-width: none;
+        width: 100%;
+    }
+    .right > div {
+        max-width: 780px;
+    }
+}
+
+/* 576px to 768px  */
+@media screen and (max-width: 576px) {  
+    .box {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+    body {
+        padding: 0 25px;
+    }
+    .portfolio {
+        gap: 20vw;
+    }
+
+}
