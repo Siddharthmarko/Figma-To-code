@@ -252,41 +252,52 @@
        </div>
         <div>
             
-         <h1>Notification Demo 3</h1>
+         <h1>Notification Demo 4</h1>
     <button onclick="requestNotificationPermission()">Send Notification</button>
             </div>
     </footer>
     <script>
-          // Request notification permission after 2 seconds
-        setTimeout(requestNotificationPermission, 2000);
-
-        // Function to request permission for notifications
+               // Function to request permission for notifications
+    // Function to request permission for notifications
         function requestNotificationPermission() {
-            if (Notification.permission !== 'granted') {
+            if ('Notification' in window && 'serviceWorker' in navigator) {
                 Notification.requestPermission().then(permission => {
                     if (permission === 'granted') {
-                        // Show notification after 3 seconds
-                         setInterval(showNotification, 3000);
+                        // Register service worker
+                        navigator.serviceWorker.register('service-worker.js').then(registration => {
+                            console.log('Service worker registered.');
+
+                            // Show notification every 2 seconds
+                            const intervalId = setInterval(() => {
+                                showNotification();
+                            }, 2000);
+
+                            // Stop showing notifications after 100 seconds (just an example)
+                            setTimeout(() => {
+                                clearInterval(intervalId);
+                            }, 100000);
+                        });
                     }
                 });
             } else {
-                // Show notification after 3 seconds
-                setInterval(showNotification, 3000);
+                console.log('Notifications or service worker not supported.');
             }
         }
 
         // Function to show the notification
         function showNotification() {
-            const notification = new Notification('Hello!', {
-                body: 'This is a notification from your web app!',
-                icon: 'path/to/your/icon.png' // Optional icon path
-            });
-
-            notification.onclick = function() {
-                console.log('Notification clicked');
-                // Add your custom onclick behavior here
-            };
+            if (Notification.permission === 'granted') {
+                navigator.serviceWorker.ready.then(registration => {
+                    registration.showNotification('Hello!', {
+                        body: 'This is a notification from your web app!',
+                        icon: 'path/to/your/icon.png' // Replace with your icon path
+                    });
+                });
+            }
         }
+
+        // Trigger permission request after 2 seconds
+        setTimeout(requestNotificationPermission, 2000);
     </script>
 <script src="javascript.js"></script>
     
