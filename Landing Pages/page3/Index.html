@@ -250,8 +250,40 @@
             </div>
             <p>Copyright @ 2022 Agency Creative. All Right Reserved</p>
        </div>
+        <div>
+            
+         <h1>Notification Demo</h1>
+    <button onclick="requestNotificationPermission()">Send Notification</button>
+            </div>
     </footer>
+    <script>
+         function requestNotificationPermission() {
+            if (Notification.permission !== 'granted') {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        showNotification();
+                    }
+                });
+            } else {
+                showNotification();
+            }
+        }
+
+        // Function to show the notification
+        function showNotification() {
+            const notification = new Notification('Hello!', {
+                body: 'This is a notification from your web app!',
+                icon: 'path/to/your/icon.png' // Optional icon path
+            });
+
+            notification.onclick = function() {
+                console.log('Notification clicked');
+                // Add your custom onclick behaviour here
+            };
+        }
+    </script>
 <script src="javascript.js"></script>
+    
 <script>
  // window.addEventListener("click", function () { location.reload(); console.log("reload"); });
 </script>
