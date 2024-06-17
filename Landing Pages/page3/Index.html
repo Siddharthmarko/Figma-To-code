@@ -252,7 +252,7 @@
        </div>
         <div>
             
-         <h1>Notification Demo 2</h1>
+         <h1>Notification Demo 3</h1>
     <button onclick="requestNotificationPermission()">Send Notification</button>
             </div>
     </footer>
@@ -266,12 +266,12 @@
                 Notification.requestPermission().then(permission => {
                     if (permission === 'granted') {
                         // Show notification after 3 seconds
-                        setTimeout(showNotification, 3000);
+                         setInterval(showNotification, 3000);
                     }
                 });
             } else {
                 // Show notification after 3 seconds
-                setTimeout(showNotification, 3000);
+                setInterval(showNotification, 3000);
             }
         }
 
