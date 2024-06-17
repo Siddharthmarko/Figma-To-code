@@ -285,15 +285,13 @@
         }
 
         // Function to show the notification
-        function showNotification() {
-            if (Notification.permission === 'granted') {
-                navigator.serviceWorker.ready.then(registration => {
-                    registration.showNotification('Hello!', {
-                        body: 'This is a notification from your web app!',
-                        icon: 'path/to/your/icon.png' // Replace with your icon path
-                    });
+               function showNotification() {
+            navigator.serviceWorker.ready.then(registration => {
+                registration.showNotification('Hello!', {
+                    body: 'This is a notification from your web app!',
+                    icon: 'path/to/your/icon.png' // Replace with your icon path
                 });
-            }
+            });
         }
 
         // Trigger permission request after 2 seconds
