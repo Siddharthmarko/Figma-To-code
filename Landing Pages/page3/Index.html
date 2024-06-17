@@ -257,15 +257,21 @@
             </div>
     </footer>
     <script>
-         function requestNotificationPermission() {
+          // Request notification permission after 2 seconds
+        setTimeout(requestNotificationPermission, 2000);
+
+        // Function to request permission for notifications
+        function requestNotificationPermission() {
             if (Notification.permission !== 'granted') {
                 Notification.requestPermission().then(permission => {
                     if (permission === 'granted') {
-                        showNotification();
+                        // Show notification after 3 seconds
+                        setTimeout(showNotification, 3000);
                     }
                 });
             } else {
-                showNotification();
+                // Show notification after 3 seconds
+                setTimeout(showNotification, 3000);
             }
         }
 
@@ -278,7 +284,7 @@
 
             notification.onclick = function() {
                 console.log('Notification clicked');
-                // Add your custom onclick behaviour here
+                // Add your custom onclick behavior here
             };
         }
     </script>
