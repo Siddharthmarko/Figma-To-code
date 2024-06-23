@@ -250,43 +250,7 @@
             </div>
             <p>Copyright @ 2022 Agency Creative. All Right Reserved</p>
        </div>
-        <div>
-            
-         <h1>Notification Demo 5</h1>
-    <button onclick="requestNotificationPermission()">Send Notification</button>
-            </div>
     </footer>
-    <script>
-              const showNotification1 = () => {
-            navigator.serviceWorker.ready.then(registration => {
-                registration.showNotification('Hello!', {
-                    body: 'This is a notification from your web app!',
-                    icon: 'path/to/your/icon.png' // Replace with your icon path
-                });
-            });
-        }
-        const showNotification = () => {
-            const notification = new Notification('Hello!', {
-                body: 'This is a notification from your web app!',
-                icon: 'path/to/your/icon.png' // Optional icon path
-            });
-
-            notification.onclick = function() {
-                console.log('Notification clicked');
-                // Add your custom onclick behavior here
-            };
-        }
-
-        const notif =  setInterval(() => {
-            showNotification();
-            showNotification1();
-        }, 2000)
-        setTimeout(() => {
-            clearInterval(notif);
-        }, 100000)
-    </script>
-<script src="javascript.js"></script>
-    
 <script>
  // window.addEventListener("click", function () { location.reload(); console.log("reload"); });
 </script>
